@@ -37,6 +37,7 @@ CREATE TABLE cinema (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL,
 
             CREATE TABLE Tarif(
                 id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+                status VARCHAR(255) NOT NULL, 
                 Price INT NOT NULL,
 
             );
@@ -44,7 +45,7 @@ CREATE TABLE cinema (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL,
      CREATE TABLE Film (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(300) NOT NULL,
-        Actor VARCHAR(300) DEFAULT Values,
+        Actor VARCHAR(300) DEFAULT VALUES,
         Time INT CHECK (Time <=5),
      );
 
@@ -55,3 +56,30 @@ CREATE TABLE cinema (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(255) NOT NULL,
         getFilm CONSTRAINT FOREIGN KEY(film_id),
         
      );
+
+     //Création de la table user //
+     CREATE TABLE user(
+        id AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(255),
+        password VARCHAR(255),
+        ROLE VARCHAR(255),
+     );
+
+    
+
+
+
+     // ajout de valeur dans les tables ( a modifier et adapter pour les autres tables)//
+
+        INSERT INTO Film (name, Actor, Time);
+        VALUES ('les indestructible', 'John Doe , Jeanne Darc', 30);
+
+
+// Requete pour lajout des tarifs demandé du client//
+    INSERT INTO Tarif(status, Price);
+    VALUES('Plein tarif', 9,20);
+    VALUES('Etudiant', 7,60);
+    VALUES('Moins de 14 ans', 5,20);
+    
+
+
